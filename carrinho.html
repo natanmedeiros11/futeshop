@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futeshop - Carrinho de Compras</title>
+    <link rel="icon" href="https://ocfc.com.br/wp-content/uploads/2017/02/BOLA-FUTEBOL-ADIDAS-UEFA-REAL-MADRID-FINALE-2016-CAPITANO-CAMPO-600x600.jpg" type="image/x-icon">
+    <style>
+        body {
+            background-image: url('https://img.freepik.com/premium-photo/close-up-van-lege-oude-betonnen-muur_23-2147856094.jpg?w=826'); 
+            background-size: cover;
+            margin: 10;
+            padding: 10;
+            font-family: Arial, sans-serif;
+        }
+
+        .cart-item {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .remove-btn {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;    
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>Carrinho de Compras</h2>
+    <div class="cart-item" id="item1">
+        <img src="https://dcdn.mitiendanube.com/stores/002/376/819/products/0011-c24fe2c1c94008ec4e16734074419606-1024-1024.webp" alt="Camisa 1">
+        <p>Camisa do Manchester City</p>
+        <button class="remove-btn" onclick="removeItem('item1')">Remover do Carrinho</button>
+    </div>
+    <div class="cart-item" id="item2">
+        <img src="https://acdn.mitiendanube.com/stores/001/631/923/products/8f8346f01-666991458f32f2fb2a16902343164486-1024-1024.webp" alt="Camisa 2">
+        <p>Camisa do Manchester United</p>
+        <button class="remove-btn" onclick="removeItem('item2')">Remover do Carrinho</button>
+    </div>
+    <div class="cart-item" id="item3">
+        <img src="https://acdn.mitiendanube.com/stores/002/171/671/products/img_55981-9bff8790f106f8fc4c16869225288198-1024-1024.webp" alt="Camisa 3">
+        <p>Camisa do Barcelona</p>
+        <button class="remove-btn" onclick="removeItem('item3')">Remover do Carrinho</button>
+    </div>
+    <script>
+        function removeItem(itemId) {
+            var item = document.getElementById(itemId);
+            if (item) {
+                item.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
